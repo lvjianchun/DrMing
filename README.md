@@ -4,9 +4,11 @@ DrMing is ..........
 - - .... (TB filled)
 
 ## Version 1.0
-- 
+-
 
 ## Installation
 ```sh
 pip install wit
+pip install speech_recognition
+pip install pyaudio
 ```
