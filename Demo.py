@@ -13,6 +13,6 @@ while True:
 		response = agent.send(text)
 		#look up
 		res= diagnostic.GetDiagnosticResult(response)
-		textToVoice.textToVoice(res)
+		textToVoice.TextToSpeech(res)
 	except Exception as e:
 		print(e)
