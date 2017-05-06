@@ -2,7 +2,7 @@ import os
 import sys
 #from src import textToVoice, voiceToText, wit_query_agent
 from src import textToVoice, voiceToText
-from wit_query_agent import wit_query_agent
+from src.wit_query_agent import wit_query_agent
 
 
 while True:
@@ -12,7 +12,7 @@ while True:
 		agent.send(text)
 		#look up
 		res = "please drink more water"
-		textToVoice.textToVoice(res)
+		textToVoice.TextToSpeech(res)
 	except Exception as e:
 		print(e)
 	
