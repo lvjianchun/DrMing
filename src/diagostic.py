@@ -1,2 +1,3 @@
 def GetDiagnosticResult(entities):
-  return "test"
+    print(entities)
+    return "please drink more water"
