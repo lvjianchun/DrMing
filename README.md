@@ -6,6 +6,11 @@ DrMing is ..........
 ## Version 1.0
 -
 
+## Run
+```sh
+python -m Demo
+```
+
 ## Installation
 ```sh
 pip install wit
