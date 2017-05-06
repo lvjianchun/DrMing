@@ -8,7 +8,6 @@ from src.wit_query_agent import wit_query_agent
 while True:
 	try:
 		text = voiceToText.GetInputVoiceToText()
-		print(text)
 		agent = wit_query_agent()
 		response = agent.send(text)
 		#look up
