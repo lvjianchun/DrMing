@@ -1,1 +1,1 @@
-from query_agent import wit_query_agent
+from .query_agent import wit_query_agent

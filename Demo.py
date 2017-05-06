@@ -1,7 +1,7 @@
 import os
 import sys
 #from src import textToVoice, voiceToText, wit_query_agent
-from src import textToVoice, voiceToText, diagostic
+from src import textToVoice, voiceToText, diagnostic
 from src.wit_query_agent import wit_query_agent
 
 
