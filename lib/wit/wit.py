@@ -12,7 +12,6 @@ WIT_API_HOST = os.getenv('WIT_URL', 'https://api.wit.ai')
 WIT_API_VERSION = os.getenv('WIT_API_VERSION', '20160516')
 DEFAULT_MAX_STEPS = 5
 INTERACTIVE_PROMPT = '> '
-LEARN_MORE = 'Learn more at https://wit.ai/docs/quickstart'
 
 class WitError(Exception):
     pass
