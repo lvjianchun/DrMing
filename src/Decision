@@ -1,0 +1,5 @@
+wheezing	Tree	q1
+q1	Yes	q2
+q2	Yes	q3
+q2	No	q4
+q1	No	q5
