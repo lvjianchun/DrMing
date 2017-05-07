@@ -24,7 +24,6 @@ def loadBinaryTree(decision_file):
 	with open(decision_file) as f:
 		for line in f:
 			sp = line.strip().split('\t')
-			print(sp)
 			if len(sp) != 3:
 				continue
 			ID = sp[0]
