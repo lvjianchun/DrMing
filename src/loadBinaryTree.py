@@ -56,6 +56,15 @@ def loadTsvDict(file_name, d):
 			sp = line.strip().split('\t')
 			if len(sp) == 2:
 				d[sp[0]] = sp[1]
+def load():
+	loadBinaryTree("src/Decision")
+	loadTsvDict("src/ID2Description", ID2Description)
+
+def get_by_symptom(s):
+	return GetTreeRoot(s)
+
+def get_question(node):
+	return ID2Description[node.ID]
 
 if __name__ == '__main__':
 	loadBinaryTree("Decision")

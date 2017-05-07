@@ -28,17 +28,17 @@ def TextToSpeech(text):
 	path = "/sts/v1.0/issueToken"
 
 	# Connect to server to get the Access Token
-	print ("Connect to server to get the Access Token")
+	#print ("Connect to server to get the Access Token")
 	conn = http.client.HTTPSConnection(AccessTokenHost)
 	conn.request("POST", path, params, headers)
 	response = conn.getresponse()
-	print(response.status, response.reason)
+	#print(response.status, response.reason)
 
 	data = response.read()
 	conn.close()
 
 	accesstoken = data.decode("UTF-8")
-	print ("Access Token: " + accesstoken)
+	#print ("Access Token: " + accesstoken)
 
 	body = ElementTree.Element('speak', version='1.0')
 	body.set('{http://www.w3.org/XML/1998/namespace}lang', 'en-us')
@@ -56,11 +56,11 @@ def TextToSpeech(text):
 				"User-Agent": "TTSForPython"}
 
 	#Connect to server to synthesize the wave
-	print ("\nConnect to server to synthesize the wave")
+	#print ("\nConnect to server to synthesize the wave")
 	conn = http.client.HTTPSConnection("speech.platform.bing.com")
 	conn.request("POST", "/synthesize", ElementTree.tostring(body), headers)
 	response = conn.getresponse()
-	print(response.status, response.reason)
+	#print(response.status, response.reason)
 
 	data = response.read()
 	conn.close()
@@ -73,7 +73,7 @@ def TextToSpeech(text):
                  frames_per_buffer=2048)
 	stream.write(data)
 	stream.close()
-	print("The synthesized wave length: %d" %(len(data)))
+	#print("The synthesized wave length: %d" %(len(data)))
 
 
 if __name__ == '__main__':

@@ -14,6 +14,7 @@ python -m Demo
 ## Installation
 ```sh
 pip install wit
-pip install speech_recognition
+pip install SpeechRecognition
+brew instll portaudio
 pip install pyaudio
 ```

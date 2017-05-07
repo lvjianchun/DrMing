@@ -1,6 +1,6 @@
 from wit import Wit
 
-class wit_query_agent():
+class QueryAgent():
 
     def __init__(self, access_token=None):
         self.access_token = access_token
@@ -11,7 +11,6 @@ class wit_query_agent():
 
     def send(self, text):
         resp = self.client.message(text)
-        print(str(resp))
         return resp
 
 
