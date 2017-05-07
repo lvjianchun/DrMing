@@ -63,6 +63,7 @@ def TextToSpeech(text):
 	#print(response.status, response.reason)
 
 	data = response.read()
+
 	conn.close()
 	pa = pyaudio.PyAudio()
 	stream = pa.open(format=pyaudio.paInt16,
