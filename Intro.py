@@ -16,9 +16,8 @@ def main():
         try:
             text = get_user_voice_input()
             if 'doctor' in text or 'ming' in text:
-                say("Hi Dan")
                 time.sleep(0.5)
-                say("How can I help you today?")
+                say("Hi Dan, How can I help you today?")
                 break
             else:
                 print("[DEBUG] nothing")
