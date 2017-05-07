@@ -1,6 +1,6 @@
 def GetInputVoiceToText(default):
     import speech_recognition as sr
-    from .textToVoice import TextToSpeech
+    #from .textToVoice import TextToSpeech
 
 
     # obtain audio from the microphone
@@ -13,14 +13,15 @@ def GetInputVoiceToText(default):
         text = r.recognize_bing(audio, key=BING_KEY)
         print("Microsoft Bing Voice Recognition thinks you said " + text)
         return text
-    except sr.UnknownValueError:
+    except sr.UnknownValueError as e:
         if default:
             return default
-        TextToSpeech("Sorry, I did not hear anything from you.")
-        pass
+        raise e
     except sr.RequestError as e:
-        return default
-        #raise Exception("Could not request results from Microsoft Bing Voice Recognition service; {0}".format(e))
+        if default:
+            return default
+        print("[ERROR] Could not request results from Microsoft Bing Voice Recognition service; {0}".format(e))
+        raise e
 
 if __name__ == '__main__':
     s = GetInputVoiceToText()
